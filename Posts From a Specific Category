@@ -1,0 +1,19 @@
+<style>
+#bo-rp-box{float:left;margin-bottom:10px;margin-top:0px;}
+#bo-rp-box ul{margin:0px;float:left;margin-left:20px;padding:0px;}
+#bo-rp-box li{vertical-align:middle;list-style:disc outside url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCBEqpX6rlREc-_w9Y2UOtZ5D4s7RSnAHZA8JmHhJDcw75kNpWM6GGM0qRcqvoNUI2geyWfUQ2dZnfmahGNVvwvyJg-WtvN6IpPVe39Qce3QDJ6GNZ9vwcuTzTFLfC9fHr1KXg7mf6CMQ/s1600/b1.png"); margin-bottom:0;width:auto;margin-top:0;padding:10px 0;}
+#bo-rp-box a{color:#0F0F0F;text-decoration:none;font-size:14px}
+#bo-rp-box a:visited {text-decoration: none;color:blue;}
+#bo-rp-box a:hover{color:blue}
+</style>
+<script>
+function rp_results_label(r){for(var e=0;e<r.feed.entry.length;e++){var l=r.feed.entry[e];rpTitles[rpTitlesNumb]=l.title.$t;for(var t=0;t<l.link.length;t++)if("alternate"==l.link[t].rel){rpUrls[rpTitlesNumb]=l.link[t].href,rpTitlesNumb++;break}}}function removeRandomDuplicate(){for(var r=new Array(0),e=new Array(0),l=0;l<rpUrls.length;l++)contains(r,rpUrls[l])||(r.length+=1,r[r.length-1]=rpUrls[l],e.length+=1,e[e.length-1]=rpTitles[l]);rpTitles=e,rpUrls=r}function contains(r,e){for(var l=0;l<r.length;l++)if(r[l]==e)return!0;return!1}function showRandomLabels(){for(e=0;e<rpUrls.length;e++)rpUrls[e]==currentposturl&&(rpUrls.splice(e,1),rpTitles.splice(e,1));var r=Math.floor((rpTitles.length-1)*Math.random()),e=0;for(rpTitles.length>1&&document.write("<ul>");e<rpTitles.length&&e<20&&e<maxresults;)document.write('<li><a href="'+rpUrls[r]+'">'+rpTitles[r]+"</a></li>"),r<rpTitles.length-1?r++:r=0,e++;document.write("</ul>")}var rpTitles=new Array,rpTitlesNumb=0,rpUrls=new Array;
+</script>
+<div id="bo-rp-box">
+<script src="/feeds/posts/default/-/غرائب وعجائب?alt=json-in-script&callback=rp_results_label&max-results=10"></script>
+<script>
+var currentposturl="";
+var maxresults=6;
+removeRandomDuplicate(); showRandomLabels();
+</script>
+</div>
